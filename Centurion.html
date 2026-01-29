@@ -225,8 +225,7 @@
             <li>One of the walls is the goal, the rest will cause strikes if moved into.</li>
             <li>To defuse the module, locate the goal wall, and move through it from either side.</li>
             <li>Using the methods below, calculate a row (0-7), a
-                column (0-7), and a direction (NSEW); the goal wall will
-                be the first wall from these coordinates in the given direction.</li>
+                column (0-7), and a direction (NSEW); <b>Direct the defuser to the correct coordinates then into the nearest wall in said direction.</b></li>
         </ul>
 
         <p><b><u>Row:</b></u></p>
@@ -4103,8 +4102,8 @@
         <p class="flavour-text">If bombs were stock brokers...
 
         </p><p style="margin-bottom: 0.2em;"><u>Defusing this module requires the expert to have a device
-        that can connect to the World Wide Web.</u></p>
-        <p style="margin-bottom: 0.2em;">This module has the ability to connect to the internet and query the state of foreign exchange rates. There should be a three times three grid of keys, each with a light emitting diode. <u>DO NOT PRESS ANY KEY ON THIS MODULE WHILE THE LIGHT EMITTING DIODES ARE FLASHING IN SEQUENCE.</u></p>
+        that can connect to the Internet.</u></p>
+        <p style="margin-bottom: 0.2em;">This module has the ability to connect to the internet and query the state of foreign exchange rates. There should be a 3x3 grid of keys, each with an LED. <u>DO NOT PRESS ANY KEY ON THIS MODULE WHILE THE LEDS ARE FLASHING IN SEQUENCE.</u></p>
         <p style="margin: 0em;">The keys are grouped by rows:</p>
         <table style="margin: 0em;">
             <tbody style="margin: 0em;"><tr>
@@ -4117,32 +4116,62 @@
                 <td>Bottom row: Value of currency to convert.</td>
             </tr>
         </tbody></table>
-
-        <h3>All light emitting diodes have turned green:</h3>
-        <p style="margin: 0em;">Enter the following uniform resource locator into your internet capable device:<br>
+			<p><b>See Appendix ISO 4217 on following page for currency codes reference.</b></p>
+        <h3>All LEDs have turned green:</h3>
+        <p style="margin: 0em;">Enter the following url into your internet capable device:<br>
             <u>https://api.exchangerate.host/latest?base=XXX&symbols=YYY</u>
             <br>
             Replace <u>XXX</u> with the ISO 4217 alphabetic code for the base currency.<br>
             Replace <u>YYY</u> with the ISO 4217 alphabetic code for the target currency.<br>
-            You will receive data in a Javascript object notation format, look for <u>{"YYY": NUMBER}</u>, where <u>NUMBER</u> will be the exchange rate. Using the exchange rate,
-        convert the number in the bottom row to the target currency, round that number
-            down and take note of the 2nd digit from the left<span style="vertical-align: super; font-size: .83em;">[4]</span>. Press the Nth key where N is
-            the noted number (count keys from left to right, top to bottom)<span style="vertical-align: super; font-size: .83em;">[5]</span>.</p>
-        <h3 style="margin-top: 0.4em;">All light emitting diodes have turned red:</h3>
-        <p style="margin: 0em;">In this case the module failed to query today's currency rates. Get the ISO 4217
-        numeric code for the target currency's country and take note the 2nd digit from
-        the right. Press the Nth key where N is the noted number (count keys from left to
-        right, top to bottom)<span style="vertical-align: super; font-size: .83em;">[5]</span>.</p>
-        <p style="margin-bottom: 0">
+            You will receive data in a Javascript object notation format, look for <u>{"YYY": NUMBER}</u>, where <u>NUMBER</u> will be the exchange rate. Using the exchange rate, convert the number in the bottom row to the target currency, round that number down and take note of the 2nd digit from the left<span style="vertical-align: super; font-size: .83em;">[4]</span>. Press the Nth key where N is the noted number (count keys in reading order.)<span style="vertical-align: super; font-size: .83em;">[5]</span>.</p>
+        <h3 style="margin-top: 0.4em;">All LEDs have turned red:</h3>
+        <p style="margin: 0em;">In this case the module failed to query today's currency rates. Get the ISO 4217 numeric code for the target currency's country and take note the 2nd digit from the right. Press the Nth key where N is the noted number (count keys in reading order.)<span style="vertical-align: super; font-size: .83em;">[5]</span>.</p>
+        <h3 style="margin-top: 0.3em;">Footnotes:</h3>
+		<p style="margin-bottom: 0">
             [1]: If there is more than one battery on the bomb, the base currency code and target currency code is swapped.<br>
             [2]: This may instead be the ISO 4217 numeric code.<br>
             [3]: Note the currency rates are updated around 4PM CET.<br>
             [4]: In the case the converted currency is less than 10, the noted number is 0.<br>
             [5]: In the case the noted number is 0, press the top left key.
         </p>
-        <p class="appendix-reference"><span>See Appendix ISO 4217 for currency codes reference.</span></p>
     </div>
-</div><div class="page " id="ForgetMeNot">
+</div>
+
+<div class="page " id="AppendixISO4217">
+    <!-- Referenced by: Foreign Exchange Rates -->
+    <div class="page-header">
+        <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+        <span class="page-header-section-title">Appendix ISO 4217</span>
+    </div>
+    <div class="page-footer absolute-footer appendixpagecount"></div>
+    <div class="page-content">
+        <h2>Appendix ISO 4217: Currency Codes Reference</h2>
+        <p>The following is a list of active codes of official ISO 4217 currency names that are supported by <u>http://api.exchangeratesapi.io/</u>. In the standard the values are called "alphabetic code" and "numeric code".</p>
+        <style>.currencytable td { padding: .3em; vertical-align: middle; text-align: center;}</style>
+        <table class="currencytable" style="border: none;">
+            <tbody>
+                <tr><th>Code</th><th>Num.</th><th>Currency</th>
+                    <td rowspan="26" style="border: none; padding: 0.1em; margin: 0"></td>
+                                            <th>Code</th><th>Num.</th><th>Currency</th>
+                    <td rowspan="26" style="border: none; padding: 0.1em; margin: 0"></td>
+                                                            <th>Code</th><th>Num.</th><th>Currency</th></tr>
+                <tr><td>AUD</td><td>036</td><td>Australian dollar</td>  <td>HRK</td><td>191</td><td>Croatian kuna</td>          <td>NZD</td><td>554</td><td>New Zealand dollar</td>   </tr>
+                <tr><td>BGN</td><td>975</td><td>Bulgarian lev</td>      <td>HUF</td><td>348</td><td>Hungarian forint</td>       <td>PHP</td><td>608</td><td>Philippine peso</td>   </tr>
+                <tr><td>BRL</td><td>986</td><td>Brazilian real</td>     <td>IDR</td><td>360</td><td>Indonesian rupiah</td>      <td>PLN</td><td>985</td><td>Polish złoty</td>   </tr>
+                <tr><td>CAD</td><td>124</td><td>Canadian dollar</td>    <td>ILS</td><td>376</td><td>Israeli new shekel</td>    <td>RON</td><td>946</td><td>Romanian leu</td>   </tr>
+                <tr><td>CHF</td><td>756</td><td>Swiss franc</td>        <td>INR</td><td>356</td><td>Indian rupee</td>           <td>RUB</td><td>643</td><td>Russian ruble</td>   </tr>
+                <tr><td>CNY</td><td>156</td><td>Renminbi</td>           <td>ISK</td><td>352</td><td>Icelandic króna</td>        <td>SEK</td><td>752</td><td>Swedish krona</td>   </tr>
+                <tr><td>CZK</td><td>203</td><td>Czech koruna</td>       <td>JPY</td><td>392</td><td>Japanese yen</td>           <td>SGD</td><td>702</td><td>Singapore dollar</td>   </tr>
+                <tr><td>DKK</td><td>208</td><td>Danish krone</td>       <td>KRW</td><td>410</td><td>South Korean won</td>       <td>THB</td><td>764</td><td>Thai baht</td>   </tr>
+                <tr><td>EUR</td><td>978</td><td>Euro</td>               <td>MXN</td><td>484</td><td>Mexican peso</td>           <td>TRY</td><td>949</td><td>Turkish lira</td>   </tr>
+                <tr><td>GBP</td><td>826</td><td>Pound sterling</td>     <td>MYR</td><td>458</td><td>Malaysian ringgit</td>      <td>USD</td><td>840</td><td>United States dollar</td>   </tr>
+                <tr><td>HKD</td><td>344</td><td>Hong Kong dollar</td>   <td>NOK</td><td>578</td><td>Norwegian krone</td>        <td>ZAR</td><td>710</td><td>South African rand</td>   </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="page " id="ForgetMeNot">
     <div class="page-header">
         <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
         <span class="page-header-section-title">Forget Me Not</span>
@@ -15997,39 +16026,9 @@
             </tr>
         </table>
     </div>
-</div><div class="page " id="AppendixISO4217">
-    <!-- Referenced by: Foreign Exchange Rates -->
-    <div class="page-header">
-        <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
-        <span class="page-header-section-title">Appendix ISO 4217</span>
-    </div>
-    <div class="page-footer absolute-footer appendixpagecount"></div>
-    <div class="page-content">
-        <h2>Appendix ISO 4217: Currency Codes Reference</h2>
-        <p>The following is a list of active codes of official ISO 4217 currency names that are supported by <u>http://api.exchangeratesapi.io/</u>. In the standard the values are called "alphabetic code" and "numeric code".</p>
-        <style>.currencytable td { padding: .3em; vertical-align: middle; text-align: center;}</style>
-        <table class="currencytable" style="border: none;">
-            <tbody>
-                <tr><th>Code</th><th>Num.</th><th>Currency</th>
-                    <td rowspan="26" style="border: none; padding: 0.1em; margin: 0"></td>
-                                            <th>Code</th><th>Num.</th><th>Currency</th>
-                    <td rowspan="26" style="border: none; padding: 0.1em; margin: 0"></td>
-                                                            <th>Code</th><th>Num.</th><th>Currency</th></tr>
-                <tr><td>AUD</td><td>036</td><td>Australian dollar</td>  <td>HRK</td><td>191</td><td>Croatian kuna</td>          <td>NZD</td><td>554</td><td>New Zealand dollar</td>   </tr>
-                <tr><td>BGN</td><td>975</td><td>Bulgarian lev</td>      <td>HUF</td><td>348</td><td>Hungarian forint</td>       <td>PHP</td><td>608</td><td>Philippine peso</td>   </tr>
-                <tr><td>BRL</td><td>986</td><td>Brazilian real</td>     <td>IDR</td><td>360</td><td>Indonesian rupiah</td>      <td>PLN</td><td>985</td><td>Polish złoty</td>   </tr>
-                <tr><td>CAD</td><td>124</td><td>Canadian dollar</td>    <td>ILS</td><td>376</td><td>Israeli new shekel</td>    <td>RON</td><td>946</td><td>Romanian leu</td>   </tr>
-                <tr><td>CHF</td><td>756</td><td>Swiss franc</td>        <td>INR</td><td>356</td><td>Indian rupee</td>           <td>RUB</td><td>643</td><td>Russian ruble</td>   </tr>
-                <tr><td>CNY</td><td>156</td><td>Renminbi</td>           <td>ISK</td><td>352</td><td>Icelandic króna</td>        <td>SEK</td><td>752</td><td>Swedish krona</td>   </tr>
-                <tr><td>CZK</td><td>203</td><td>Czech koruna</td>       <td>JPY</td><td>392</td><td>Japanese yen</td>           <td>SGD</td><td>702</td><td>Singapore dollar</td>   </tr>
-                <tr><td>DKK</td><td>208</td><td>Danish krone</td>       <td>KRW</td><td>410</td><td>South Korean won</td>       <td>THB</td><td>764</td><td>Thai baht</td>   </tr>
-                <tr><td>EUR</td><td>978</td><td>Euro</td>               <td>MXN</td><td>484</td><td>Mexican peso</td>           <td>TRY</td><td>949</td><td>Turkish lira</td>   </tr>
-                <tr><td>GBP</td><td>826</td><td>Pound sterling</td>     <td>MYR</td><td>458</td><td>Malaysian ringgit</td>      <td>USD</td><td>840</td><td>United States dollar</td>   </tr>
-                <tr><td>HKD</td><td>344</td><td>Hong Kong dollar</td>   <td>NOK</td><td>578</td><td>Norwegian krone</td>        <td>ZAR</td><td>710</td><td>South African rand</td>   </tr>
-            </tbody>
-        </table>
-    </div>
-</div><div class="page morse-code " id="AppendixM">
+</div>
+
+<div class="page morse-code " id="AppendixM">
     <div class="page-header">
         <span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
         <span class="page-header-section-title">Appendix M</span>
