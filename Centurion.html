@@ -2416,7 +2416,8 @@
             <tr><th>Detonate</th><td>3, 1, 2</td><td>1, 2, 3</td><td>2, 1, 3</td><td>3, 1, 2</td></tr>
         </table>
     </div>
-</div><div class="page venn-wires " id="ComplicatedWires">
+</div>
+<div class="page venn-wires " id="ComplicatedWires">
     <div class="page-header">
         <span class="page-header-doc-title">Keep Talking and Nobody Explodes</span>
         <span class="page-header-section-title">Complicated Wires</span>
@@ -2431,37 +2432,52 @@
             <li>For <b>each</b> wire/LED/symbol combination, use the tables below to decide whether or not to cut the wire.</li>
             <li>Each wire may be striped with multiple colors.</li>
         </ul>
-		<table style="font-size: 24px;">
+		<style>
+            .complicated-wires-instruction-table th {
+                background-color: rgb(80, 80, 80);
+                color: white;
+				font-size: 24px !important;
+            }
+            .complicated-wires-instruction-table tr:nth-child(2n+3) {
+                background-color: rgb(220, 220, 220);
+            }
+            .complicated-wires-instruction-table {
+                text-align: center;
+                width: inherit;
+				font-size: 24px;
+            }
+        </style>
+		<table class= "complicated-wires-instruction-table">
 			<tr>
 				<td></td>
-				<td><b>White</b></td>
-				<td><b>Red</b></td>
-				<td><b>Blue</b></td>
-				<td><b>Both</b></td>
+				<th><b>White</b></th>
+				<th><b>Red</b></th>
+				<th><b>Blue</b></th>
+				<th><b>Both</b></th>
 			</tr>
 			<tr>
-				<td><b>Neither</b></td>
+				<th><b>Neither</b></th>
 				<td>Cut</td>
 				<td>Serial #</td>
 				<td>Serial #</td>
 				<td>Serial #</td>
 			</tr>
 			<tr>
-				<td><b>Star</b></td>
+				<th><b>Star</b></th>
 				<td>Cut</td>
 				<td>Cut</td>
 				<td>Do Not Cut</td>
 				<td>Parallel Port</td>
 			</tr>
 			<tr>
-				<td><b>Light</b></td>
+				<th><b>Light</b></th>
 				<td>Do Not Cut</td>
 				<td>Batteries</td>
 				<td>Parallel Port</td>
 				<td>Serial #</td>
 			</tr>
 			<tr>
-				<td><b>Both</b></td>
+				<th><b>Both</b></th>
 				<td>Batteries</td>
 				<td>Batteries</td>
 				<td>Parallel Port</td>
@@ -2469,7 +2485,7 @@
 			</tr>
 		</table>
 		<br>
-        <div style= "margin-left: 12mm" "class="clearfix">
+        <div style= "display: flex; justify-content: center;">
             <table id="venninstructiontable">
                 <tr>
                     <th>Instruction:</th>
