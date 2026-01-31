@@ -2428,116 +2428,80 @@
         <p class="flavour-text">These wires aren't like the others. Some have stripes! That makes them completely different. The good news is that we've found a concise set of instructions on what to do about it! Maybe too concise...</p>
         <ul>
             <li>Look at each wire: there is an LED above the wire and a space for a "&#9733;" symbol below the wire.</li>
-            <li>For <b>each</b> wire/LED/symbol combination, use the Venn diagram below to decide whether or not to cut the wire.</li>
+            <li>For <b>each</b> wire/LED/symbol combination, use the tables below to decide whether or not to cut the wire.</li>
             <li>Each wire may be striped with multiple colors.</li>
         </ul>
-        <div id="venndiagram">
-            <?xml version="1.0" encoding="utf-8"?>
-                <svg width="100%" height="100%" viewbox="0 0 800 650" preserveaspectratio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="0" cy="0" rx="300" ry="160" stroke="black" fill="none" stroke-width="5" stroke-dasharray="20,10,5,10" transform="translate(350, 300) rotate(45)"></ellipse>
-                    <ellipse cx="0" cy="0" rx="300" ry="160" stroke="black" fill="none" stroke-width="6" stroke-dasharray="" transform="translate(450, 300) rotate(-45)"></ellipse>
-                    <ellipse cx="0" cy="0" rx="300" ry="160" stroke="black" fill="none" stroke-width="4" stroke-dasharray="4,7" transform="translate(250, 400) rotate(45)"></ellipse>
-                    <ellipse cx="0" cy="0" rx="300" ry="160" stroke="black" fill="none" stroke-width="10" stroke-dasharray="10,4" transform="translate(550, 400) rotate(-45)"></ellipse>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="225" y="150" font-size="48px">
-                        <tspan>S</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="575" y="150" font-size="48px">
-                        <tspan>S</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="100" y="350" font-size="48px">
-                        <tspan>C</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="700" y="350" font-size="48px">
-                        <tspan>D</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="185" y="250" font-size="32px">
-                        <tspan>C</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="400" y="225" font-size="32px">
-                        <tspan>S</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="615" y="250" font-size="32px">
-                        <tspan>P</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="400" y="590" font-size="32px">
-                        <tspan>B</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="260" y="495" font-size="32px">
-                        <tspan>D</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="530" y="495" font-size="32px">
-                        <tspan>B</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="305" y="350" font-size="32px">
-                        <tspan>P</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="500" y="350" font-size="32px">
-                        <tspan>S</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="335" y="530" font-size="32px">
-                        <tspan>P</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="465" y="530" font-size="32px">
-                        <tspan>B</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="400" y="450" font-size="32px">
-                        <tspan>D</tspan>
-                    </text>
-                    <text font-family="Special Elite, sans-serif" text-anchor="middle" x="400" y="80" font-size="48px">
-                        <tspan>C</tspan>
-                    </text>
-                </svg>
-        </div>
-        <div class="clearfix">
-            <table id="vennlegendtable">
-                <tr>
-                    <td><img class="venn-legend-line" src="img/modules/venn/venn_red.svg"></td>
-                    <td class="venn-legend-text">Wire has red coloring</td>
-                </tr>
-                <tr>
-                    <td><img class="venn-legend-line" src="img/modules/venn/venn_blue.svg"></td>
-                    <td class="venn-legend-text">Wire has blue coloring</td>
-                </tr>
-                <tr>
-                    <td><img class="venn-legend-line" src="img/modules/venn/venn_symbol.svg"></td>
-                    <td class="venn-legend-text">Has &#9733; symbol</td>
-                </tr>
-                <tr>
-                    <td><img class="venn-legend-line" src="img/modules/venn/venn_led.svg"></td>
-                    <td class="venn-legend-text">LED is on</td>
-                </tr>
-            </table>
+		<table style="font-size: 24px;">
+			<tr>
+				<td></td>
+				<td><b>White</b></td>
+				<td><b>Red</b></td>
+				<td><b>Blue</b></td>
+				<td><b>Both</b></td>
+			</tr>
+			<tr>
+				<td><b>Neither</b></td>
+				<td>Cut</td>
+				<td>Serial #</td>
+				<td>Serial #</td>
+				<td>Serial #</td>
+			</tr>
+			<tr>
+				<td><b>Star</b></td>
+				<td>Cut</td>
+				<td>Cut</td>
+				<td>Do Not Cut</td>
+				<td>Parallel Port</td>
+			</tr>
+			<tr>
+				<td><b>Light</b></td>
+				<td>Do Not Cut</td>
+				<td>Batteries</td>
+				<td>Parallel Port</td>
+				<td>Serial #</td>
+			</tr>
+			<tr>
+				<td><b>Both</b></td>
+				<td>Batteries</td>
+				<td>Batteries</td>
+				<td>Parallel Port</td>
+				<td>Do Not Cut</td>
+			</tr>
+		</table>
+		<br>
+        <div style= "margin-left: 12mm" "class="clearfix">
             <table id="venninstructiontable">
                 <tr>
-                    <th>Letter</th>
-                    <th>Instruction</th>
+                    <th>Instruction:</th>
+                    <th>Qualifications:</th>
                 </tr>
                 <tr>
-                    <td>C</td>
-                    <td>Cut the wire</td>
+                    <td>Cut</td>
+                    <td>Cut the wire.</td>
                 </tr>
                 <tr>
-                    <td>D</td>
-                    <td>Do not cut the wire</td>
+                    <td>Do Not Cut</td>
+                    <td>Do not cut the wire.</td>
                 </tr>
                 <tr>
-                    <td>S</td>
-                    <td>Cut the wire if the last digit of the serial number is even</td>
+                    <td>Serial #</td>
+                    <td>Cut the wire if the last digit of the serial number is even.</td>
                 </tr>
                 <tr>
-                    <td>P</td>
-                    <td>Cut the wire if the bomb has a parallel port</td>
+                    <td>Parallel Port</td>
+                    <td>Cut the wire if there is a parallel port present.</td>
                 </tr>
                 <tr>
-                    <td>B</td>
-                    <td>Cut the wire if the bomb has two or more batteries</td>
+                    <td>Batteries</td>
+                    <td>Cut the wire if there are two or more batteries present.</td>
                 </tr>
             </table>
         </div>
         <p class="appendix-reference"><span>See Appendix B for battery identification reference.</span>
             <br><span>See Appendix C for port identification reference.</span></p>
     </div>
-</div><div class="page" id="ConnectionCheck">
+</div>
+<div class="page" id="ConnectionCheck">
     <div class="page-header">
         <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
         <span class="page-header-section-title">Connection Check</span>
@@ -6488,71 +6452,71 @@
                 <th>If the word is:</th>
                 <th>Respond at frequency:</th>
             </tr>
+			<tr>
+                <td>beats</td>
+                <td class="morse-frequency-response">3.600 MHz</td>
+            </tr>
+			<tr>
+                <td>bistro</td>
+                <td class="morse-frequency-response">3.552 MHz</td>
+            </tr>
+			<tr>
+                <td>bombs</td>
+                <td class="morse-frequency-response">3.565 MHz</td>
+            </tr>
+			<tr>
+                <td>boxes</td>
+                <td class="morse-frequency-response">3.535 MHz</td>
+            </tr>
+			<tr>
+                <td>break</td>
+                <td class="morse-frequency-response">3.572 MHz</td>
+            </tr>
+			<tr>
+                <td>brick</td>
+                <td class="morse-frequency-response">3.575 MHz</td>
+            </tr>
+			<tr>
+                <td>flick</td>
+                <td class="morse-frequency-response">3.555 MHz</td>
+            </tr>
+			<tr>
+                <td>halls</td>
+                <td class="morse-frequency-response">3.515 MHz</td>
+            </tr>
+			<tr>
+                <td>leaks</td>
+                <td class="morse-frequency-response">3.542 MHz</td>
+            </tr>
             <tr>
                 <td>shell</td>
                 <td class="morse-frequency-response">3.505 MHz</td>
             </tr>
             <tr>
-                <td>halls</td>
-                <td class="morse-frequency-response">3.515 MHz</td>
-            </tr>
-            <tr>
                 <td>slick</td>
                 <td class="morse-frequency-response">3.522 MHz</td>
+            </tr>
+			<tr>
+                <td>steak</td>
+                <td class="morse-frequency-response">3.582 MHz</td>
+            </tr>
+			<tr>
+                <td>sting</td>
+                <td class="morse-frequency-response">3.592 MHz</td>
+            </tr>
+			<tr>
+                <td>strobe</td>
+                <td class="morse-frequency-response">3.545 MHz</td>
             </tr>
             <tr>
                 <td>trick</td>
                 <td class="morse-frequency-response">3.532 MHz</td>
             </tr>
             <tr>
-                <td>boxes</td>
-                <td class="morse-frequency-response">3.535 MHz</td>
-            </tr>
-            <tr>
-                <td>leaks</td>
-                <td class="morse-frequency-response">3.542 MHz</td>
-            </tr>
-            <tr>
-                <td>strobe</td>
-                <td class="morse-frequency-response">3.545 MHz</td>
-            </tr>
-            <tr>
-                <td>bistro</td>
-                <td class="morse-frequency-response">3.552 MHz</td>
-            </tr>
-            <tr>
-                <td>flick</td>
-                <td class="morse-frequency-response">3.555 MHz</td>
-            </tr>
-            <tr>
-                <td>bombs</td>
-                <td class="morse-frequency-response">3.565 MHz</td>
-            </tr>
-            <tr>
-                <td>break</td>
-                <td class="morse-frequency-response">3.572 MHz</td>
-            </tr>
-            <tr>
-                <td>brick</td>
-                <td class="morse-frequency-response">3.575 MHz</td>
-            </tr>
-            <tr>
-                <td>steak</td>
-                <td class="morse-frequency-response">3.582 MHz</td>
-            </tr>
-            <tr>
-                <td>sting</td>
-                <td class="morse-frequency-response">3.592 MHz</td>
-            </tr>
-            <tr>
                 <td>vector</td>
                 <td class="morse-frequency-response">3.595 MHz</td>
             </tr>
-            <tr>
-                <td>beats</td>
-                <td class="morse-frequency-response">3.600 MHz</td>
-            </tr>
-        </table>
+            </table>
     </div>
 </div><div class="page " id="Morsematics">
     <div class="page-header">
