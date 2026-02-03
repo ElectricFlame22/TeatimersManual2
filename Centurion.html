@@ -815,16 +815,13 @@
     <div class="page-content">
         <img src="img/Component/Battleship.svg" class="diagram">
         <h2>On the Subject of Battleship</h2>
-        <p class="flavour-text">FIRE! ... (splash) Missed.</p>
+        <p class="flavour-text">FIRE! ... (splash) Miss.</p>
 
-        <p><strong>Attention, Cadet.</strong> We’ve narrowed the enemy’s locations
-            to within this 5×5 grid. The targets in this area are concealed, but we
-            do have a fair bit of intelligence on them.</p>
+        <p>The defuser is presented with a game of 5x5 battleship. 
+		   All spaces in the map are concealed, but you (the expert) must give the defuser enough information to sink all the ships.</p>
 
-        <p>We suspect this information may not be enough to determine with accuracy
-            where the enemy forces are deployed. This is where you come in.
-            We need you to figure out which locations within the battle arena we can
-            safely survey without being seen:</p>
+        <p>Use the following steps in order to determine which certain locations within the grid are safe to survey. 
+		   Surveying a correct location will reveal the space as either water or a piece of the ship.</p>
 
         <ul>
             <li>Take the first letter and the first digit of the serial number.
@@ -835,39 +832,30 @@
             <li>Finally, convert the number of ports into a letter A–E
                 and the number of indicators plus batteries into a digit
                 1–5 in the same manner. This is your final safe location.</li>
-            <li>In each case, the letter indicates columns (left to right),
-                the number indicates rows (top to bottom).</li>
+            <li>In each case, the letter indicates columns,
+                the number indicates rows.</li>
         </ul>
 
-        <p><strong>Attention, Ensign.</strong> We need you to ascertain the locations
-            of all enemy vessels. When you have done so, the module is disarmed. The
-            following tools are at your disposal:</p>
+        <p><strong>How to play Battleship:</strong> The module is solved when the location of all ships is revealed. 
+			Marking water is not necessary to solve the module, but is often helpeful.The following tools can be used:</p>
 
         <ul>
-            <li>Survey the safe locations by using the radar tool. Using the radar
-                on any unsafe location reveals our position to the enemy, so don’t
-                do that.</li>
-            <li>Use the water tool to mark locations that definitely have
-                no enemy vessel in them. You may also click the number above a
-                column or beside a row to mark every unmarked location in that
-                row/column as water.</li>
-            <li>Use the torpedo to attack the enemy. Do not waste
-                torpedoes on water!</li>
+            <li><em>Survey the safe locations by using the radar tool.</em> 
+			    Surveying an incorrect space will apply a strike, but will still reveal the space.</li>
+            <li><em>Use the water tool to mark locations that definitely have no ship in them.</em> 
+				The defuser may also click the number above a column or beside a row to mark every unmarked location in that row/column as water. 
+				Clicking a location with a ship while having the water tool selected will apply a strike.</li>
+            <li><em>Use the torpedo to mark locations as having a ship.</em> Using torpedos on water will apply a strike.</li>
         </ul>
 
-        <p>Our intelligence indicates that:</p>
+        <p><strong>Take note:</strong></p>
 
         <ul>
-            <li>Every enemy ship is either horizontal or vertical.</li>
-            <li>None of the vessels are directly adjacent, not even diagonally.</li>
-            <li>We know how many squares in each row and each column have a
-                piece of a ship in them. This is indicated by the numbers along
-                the edges of the grid.</li>
-            <li>We also know how many ships of each size there are. This is
-                indicated by the symbols below the grid.</li>
+            <li>Every ship is either horizontal or vertical, not diagonal.</li>
+            <li>None of the vessels are directly adjacent, not even diagonally. This means that every ship position has water directly diagonal from it.</li>
+            <li>Each row and each column has a number indicating the number of ship pieces in them. Ex: 0 means all water, and 4 means four ship pieces.</li>
+            <li>The symbols below the grid indicate how many of each size ship are present. </li>
         </ul>
-
-        <p>Good luck. Make us proud.</p>
 
     </div>
 </div><div class="page " id="BinaryLeds">
@@ -5701,38 +5689,38 @@
         </ul>
         <div class="memory-rules">
             <h4>Stage 1:</h4>
-            <p><span>If the display is 1, press the button in the second position.</span>
-                <br><span>If the display is 2, press the button in the second position.</span>
-                <br><span>If the display is 3, press the button in the third position.</span>
-                <br><span>If the display is 4, press the button in the fourth position.</span>
+            <p><span>Display 1: 2nd position.</span>
+                <br><span>Display 2: 2nd position.</span>
+                <br><span>Display 3: 3rd position.</span>
+                <br><span>Display 4: 4th position.</span>
                 <br>
             </p>
             <h4>Stage 2:</h4>
-            <p><span>If the display is 1, press the button labeled "4".</span>
-                <br><span>If the display is 2, press the button in the same position as you pressed in stage 1.</span>
-                <br><span>If the display is 3, press the button in the first position.</span>
-                <br><span>If the display is 4, press the button in the same position as you pressed in stage 1.</span>
+            <p><span>Display 1: labeled "4".</span>
+                <br><span>Display 2: stage 1 position.</span>
+                <br><span>Display 3: 1st position.</span>
+                <br><span>Display 4: stage 1 position.</span>
                 <br>
             </p>
             <h4>Stage 3:</h4>
-            <p><span>If the display is 1, press the button with the same label you pressed in stage 2.</span>
-                <br><span>If the display is 2, press the button with the same label you pressed in stage 1.</span>
-                <br><span>If the display is 3, press the button in the third position.</span>
-                <br><span>If the display is 4, press the button labeled "4".</span>
+            <p><span>Display 1: stage 2 label.</span>
+                <br><span>Display 2: stage 1 label.</span>
+                <br><span>Display 3: 3rd position.</span>
+                <br><span>Display 4: labeled "4".</span>
                 <br>
             </p>
             <h4>Stage 4:</h4>
-            <p><span>If the display is 1, press the button in the same position as you pressed in stage 1.</span>
-                <br><span>If the display is 2, press the button in the first position.</span>
-                <br><span>If the display is 3, press the button in the same position as you pressed in stage 2.</span>
-                <br><span>If the display is 4, press the button in the same position as you pressed in stage 2.</span>
+            <p><span>Display 1: stage 1 position.</span>
+                <br><span>Display 2: 1st position.</span>
+                <br><span>Display 3: stage 2 position.</span>
+                <br><span>Display 4: stage 2 position.</span>
                 <br>
             </p>
             <h4>Stage 5:</h4>
-            <p><span>If the display is 1, press the button with the same label you pressed in stage 1.</span>
-                <br><span>If the display is 2, press the button with the same label you pressed in stage 2.</span>
-                <br><span>If the display is 3, press the button with the same label you pressed in stage 4.</span>
-                <br><span>If the display is 4, press the button with the same label you pressed in stage 3.</span>
+            <p><span>Display 1: stage 1 label.</span>
+                <br><span>Display 2: stage 2 label.</span>
+                <br><span>Display 3: stage 4 label.</span>
+                <br><span>Display 4: stage 3 label.</span>
                 <br>
             </p>
         </div>
@@ -13863,123 +13851,12 @@
             <li>The correct position can be determined by the on/off configuration of the twelve LEDs.</li>
             <li>Knob positions are relative to the "UP" label, which may have rotated.</li>
         </ul>
-        <h3>LED Configurations</h3>
-
-        <h4><span>Up Position</span>:</h4>
+        <h3>LED Configurations:</h3>
+		<br>
+		<b><em>Right Position,</b> if the shaded regions are both lit:<e/m>
         <table dir="ltr">
             <tr>
-                <td> </td>
-                <td> </td>
-                <td>X</td>
-                <td> </td>
-                <td>X</td>
-                <td>X</td>
-            </tr>
-            <tr>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td> </td>
-                <td>X</td>
-            </tr>
-        </table>
-        <table dir="ltr">
-            <tr>
-                <td>X</td>
-                <td> </td>
-                <td>X</td>
-                <td> </td>
-                <td>X</td>
-                <td> </td>
-            </tr>
-            <tr>
-                <td> </td>
-                <td>X</td>
-                <td>X</td>
-                <td> </td>
-                <td>X</td>
-                <td>X</td>
-            </tr>
-        </table>
-        <h4><span>Down Position</span>:</h4>
-        <table dir="ltr">
-            <tr>
-                <td> </td>
-                <td>X</td>
-                <td>X</td>
-                <td> </td>
-                <td> </td>
-                <td>X</td>
-            </tr>
-            <tr>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-                <td> </td>
-                <td>X</td>
-            </tr>
-        </table>
-        <table dir="ltr">
-            <tr>
-                <td>X</td>
-                <td> </td>
-                <td>X</td>
-                <td> </td>
-                <td>X</td>
-                <td> </td>
-            </tr>
-            <tr>
-                <td> </td>
-                <td>X</td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td>X</td>
-            </tr>
-        </table>
-        <h4><span>Left Position</span>:</h4>
-        <table dir="ltr">
-            <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td>X</td>
-                <td> </td>
-            </tr>
-            <tr>
-                <td>X</td>
-                <td> </td>
-                <td> </td>
-                <td>X</td>
-                <td>X</td>
-                <td>X</td>
-            </tr>
-        </table>
-        <table dir="ltr">
-            <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td>X</td>
-                <td> </td>
-            </tr>
-            <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td>X</td>
-                <td>X</td>
-                <td> </td>
-            </tr>
-        </table>
-        <h4><span>Right Position</span>:</h4>
-        <table dir="ltr">
-            <tr>
-                <td>X</td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
                 <td> </td>
                 <td>X</td>
                 <td>X</td>
@@ -13987,7 +13864,7 @@
                 <td>X</td>
             </tr>
             <tr>
-                <td>X</td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
                 <td>X</td>
                 <td>X</td>
                 <td> </td>
@@ -13997,7 +13874,7 @@
         </table>
         <table dir="ltr">
             <tr>
-                <td>X</td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
                 <td> </td>
                 <td>X</td>
                 <td>X</td>
@@ -14005,12 +13882,129 @@
                 <td> </td>
             </tr>
             <tr>
-                <td>X</td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
                 <td>X</td>
                 <td>X</td>
                 <td> </td>
                 <td>X</td>
                 <td> </td>
+            </tr>
+        </table>
+		<br>
+		<br>
+		<b><em>Left Position,</b> if the shaded regions are both unlit:</em>
+        <table dir="ltr">
+            <tr>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+                <td> </td>
+                <td> </td>
+                <td>X</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>X</td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+                <td> </td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+            </tr>
+        </table>
+        <table dir="ltr">
+            <tr>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+                <td> </td>
+                <td> </td>
+                <td>X</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+                <td> </td>
+                <td>X</td>
+                <td>X</td>
+                <td> </td>
+            </tr>
+        </table>
+		<br>
+		<br>
+		<b><em>Down Position:</b> if the shaded regions contain exactly 2 lit:</em>
+        <table dir="ltr">
+            <tr>
+                <td> </td>
+                <td>X</td>
+                <td>X</td>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+            </tr>
+            <tr>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+            </tr>
+        </table>
+        <table dir="ltr">
+            <tr>
+                <td>X</td>
+                <td> </td>
+                <td>X</td>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>X</td>
+                <td> </td>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+            </tr>
+        </table>
+		<br>
+		<br>
+        <b><em>Up Position:</b> if the shaded regions contain exactly 3 lit:</em>
+        <table dir="ltr">
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td>X</td>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+            </tr>
+            <tr>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+            </tr>
+        </table>
+        <table dir="ltr">
+            <tr>
+                <td>X</td>
+                <td> </td>
+                <td>X</td>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+                <td style="background-color: rgb(180, 180, 180)";> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>X</td>
+                <td>X</td>
+                <td> </td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
+                <td style="background-color: rgb(180, 180, 180)";>X</td>
             </tr>
         </table>
         <br>
